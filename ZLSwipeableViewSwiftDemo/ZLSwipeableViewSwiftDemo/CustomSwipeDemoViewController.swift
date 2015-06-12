@@ -13,13 +13,13 @@ class CustomSwipeDemoViewController: ZLSwipeableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        leftBarButtonItem.addAction() { item in
-            // custom push location and direction
-            self.swipeableView.swipeTopView(fromPoint: CGPoint(x: 10, y: 300), inDirection: CGVector(dx: -700, dy: -300))
-        }
-        upBarButtonItem.addAction() { item in
-            self.swipeableView.swipeTopView(fromPoint: CGPoint(x: 100, y: 30), inDirection: CGVector(dx: 100, dy: -800))
-        }
+//        leftBarButtonItem.addAction() { item in
+//            // custom push location and direction
+//            self.swipeableView.swipeTopView(fromPoint: CGPoint(x: 10, y: 300), inDirection: CGVector(dx: -700, dy: -300))
+//        }
+//        upBarButtonItem.addAction() { item in
+//            self.swipeableView.swipeTopView(fromPoint: CGPoint(x: 100, y: 30), inDirection: CGVector(dx: 100, dy: -800))
+//        }
         
         // change how ZLSwipeableViewDirection gets interpreted to location and direction
         swipeableView.interpretDirection = {(topView: UIView, direction: ZLSwipeableViewDirection, views: [UIView], swipeableView: ZLSwipeableView) in
