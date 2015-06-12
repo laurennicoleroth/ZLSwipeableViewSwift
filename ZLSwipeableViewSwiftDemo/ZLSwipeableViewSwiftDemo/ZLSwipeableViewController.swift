@@ -17,9 +17,9 @@ class ZLSwipeableViewController: UIViewController {
 
     var swipeableView: ZLSwipeableView!
     
-    var colors = ["Turquoise", "Green Sea", "Emerald", "Nephritis", "Peter River", "Belize Hole", "Amethyst", "Wisteria", "Wet Asphalt", "Midnight Blue", "Sun Flower", "Orange", "Carrot", "Pumpkin", "Alizarin", "Pomegranate", "Clouds", "Silver", "Concrete", "Asbestos"]
+    var colors = ["Turquoise", "Green Sea", "Emerald", "Nephritis", "Peter River", "Belize Hole", "Amethyst", "Wisteria", "Wet Asphalt", "Midnight Blue"]
     var colorIndex = 0
-    var loadCardsFromXib = false
+    var loadCardsFromXib = true
     
     var reloadBarButtonItem = UIBarButtonItem(title: "Reload", style: .Plain) { item in }
     var leftBarButtonItem = UIBarButtonItem(title: "←", style: .Plain) { item in }
@@ -38,17 +38,18 @@ class ZLSwipeableViewController: UIViewController {
         view.backgroundColor = UIColor.whiteColor()
         view.clipsToBounds = true
         
-        let manager = AFHTTPRequestOperationManager()
-        manager.GET("https://strongjupiter.herokuapp.com:443/api/UserModels/555196e443f15732ae2a8320/matches?access_token=XCAkdQ2bHWuYwN2hLo9ZyR8jylKtTp0fQvRSgA5ntRgfnx0piA182Cm7358MGP89",
-            parameters: nil,
-            success: { (operation:AFHTTPRequestOperation!, responseObject:AnyObject!) -> Void in
-                self.matches = responseObject as! [AnyObject]
-                self.swipeableView.dataSource = self
-            },
-            failure: { (operation:AFHTTPRequestOperation!, error:NSError!) -> Void in
-                print("fail!")
-        })
-        self.swipeableView.delegate = self
+//        let manager = AFHTTPRequestOperationManager()
+////        manager.GET("https://strongjupiter.herokuapp.com:443/api/UserModels/555196e443f15732ae2a8320/matches?access_token=XCAkdQ2bHWuYwN2hLo9ZyR8jylKtTp0fQvRSgA5ntRgfnx0piA182Cm7358MGP89",
+////            parameters: nil,
+////            success: { (operation:AFHTTPRequestOperation!, responseObject:AnyObject!) -> Void in
+////                self.matches = responseObject as! [AnyObject]
+////                self.swipeableView.dataSource = self
+////            },
+////            failure: { (operation:AFHTTPRequestOperation!, error:NSError!) -> Void in
+////                print("fail!")
+////        })
+//        
+//        self.swipeableView.delegate = self
         
         
         reloadBarButtonItem.addAction() { item in
