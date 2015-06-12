@@ -21,11 +21,11 @@ class ZLSwipeableViewController: UIViewController {
     var colorIndex = 0
     var loadCardsFromXib = true
     
-//    var reloadBarButtonItem = UIBarButtonItem(title: "Reload", style: .Plain) { item in }
-//    var leftBarButtonItem = UIBarButtonItem(title: "←", style: .Plain) { item in }
-//    var upBarButtonItem = UIBarButtonItem(title: "↑", style: .Plain) { item in }
-//    var rightBarButtonItem = UIBarButtonItem(title: "→", style: .Plain) { item in }
-//    var downBarButtonItem = UIBarButtonItem(title: "↓", style: .Plain) { item in }
+    var reloadBarButtonItem = UIBarButtonItem(title: "Reload", style: .Plain) { item in }
+    var leftBarButtonItem = UIBarButtonItem(title: "←", style: .Plain) { item in }
+    var upBarButtonItem = UIBarButtonItem(title: "↑", style: .Plain) { item in }
+    var rightBarButtonItem = UIBarButtonItem(title: "→", style: .Plain) { item in }
+    var downBarButtonItem = UIBarButtonItem(title: "↓", style: .Plain) { item in }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
@@ -39,58 +39,58 @@ class ZLSwipeableViewController: UIViewController {
         view.clipsToBounds = true
         
 //        let manager = AFHTTPRequestOperationManager()
-////        manager.GET("https://strongjupiter.herokuapp.com:443/api/UserModels/555196e443f15732ae2a8320/matches?access_token=XCAkdQ2bHWuYwN2hLo9ZyR8jylKtTp0fQvRSgA5ntRgfnx0piA182Cm7358MGP89",
-////            parameters: nil,
-////            success: { (operation:AFHTTPRequestOperation!, responseObject:AnyObject!) -> Void in
-////                self.matches = responseObject as! [AnyObject]
-////                self.swipeableView.dataSource = self
-////            },
-////            failure: { (operation:AFHTTPRequestOperation!, error:NSError!) -> Void in
-////                print("fail!")
-////        })
-//        
+//        manager.GET("https://strongjupiter.herokuapp.com:443/api/UserModels/555196e443f15732ae2a8320/matches?access_token=XCAkdQ2bHWuYwN2hLo9ZyR8jylKtTp0fQvRSgA5ntRgfnx0piA182Cm7358MGP89",
+//            parameters: nil,
+//            success: { (operation:AFHTTPRequestOperation!, responseObject:AnyObject!) -> Void in
+//                self.matches = responseObject as! [AnyObject]
+//                self.swipeableView.dataSource = self
+//            },
+//            failure: { (operation:AFHTTPRequestOperation!, error:NSError!) -> Void in
+//                print("fail!")
+//        })
+        
 //        self.swipeableView.delegate = self
         
         
-//        reloadBarButtonItem.addAction() { item in
-//            let alertController = UIAlertController(title: nil, message: "Load Cards:", preferredStyle: .ActionSheet)
-//            
-//            let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) in
-//                // ...
-//            }
-//            alertController.addAction(cancelAction)
-//            
-//            let ProgrammaticallyAction = UIAlertAction(title: "Programmatically", style: .Default) { (action) in
-//                self.loadCardsFromXib = false
-//                self.colorIndex = 0
-//                self.swipeableView.discardViews()
-//                self.swipeableView.loadViews()
-//            }
-//            alertController.addAction(ProgrammaticallyAction)
-//            
-//            let XibAction = UIAlertAction(title: "From Xib", style: .Default) { (action) in
-//                self.loadCardsFromXib = true
-//                self.colorIndex = 0
-//                self.swipeableView.discardViews()
-//                self.swipeableView.loadViews()
-//            }
-//            alertController.addAction(XibAction)
-//            
-//            self.presentViewController(alertController, animated: true, completion: nil)
-//        }
+        reloadBarButtonItem.addAction() { item in
+            let alertController = UIAlertController(title: nil, message: "Load Cards:", preferredStyle: .ActionSheet)
+            
+            let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) in
+                // ...
+            }
+            alertController.addAction(cancelAction)
+            
+            let ProgrammaticallyAction = UIAlertAction(title: "Programmatically", style: .Default) { (action) in
+                self.loadCardsFromXib = false
+                self.colorIndex = 0
+                self.swipeableView.discardViews()
+                self.swipeableView.loadViews()
+            }
+            alertController.addAction(ProgrammaticallyAction)
+            
+            let XibAction = UIAlertAction(title: "From Xib", style: .Default) { (action) in
+                self.loadCardsFromXib = true
+                self.colorIndex = 0
+                self.swipeableView.discardViews()
+                self.swipeableView.loadViews()
+            }
+            alertController.addAction(XibAction)
+            
+            self.presentViewController(alertController, animated: true, completion: nil)
+        }
         
-//        leftBarButtonItem.addAction() { item in
-//            self.swipeableView.swipeTopView(inDirection: .Left)
-//        }
-//        upBarButtonItem.addAction() { item in
-//            self.swipeableView.swipeTopView(inDirection: .Up)
-//        }
-//        rightBarButtonItem.addAction() { item in
-//            self.swipeableView.swipeTopView(inDirection: .Right)
-//        }
-//        downBarButtonItem.addAction() { item in
-//            self.swipeableView.swipeTopView(inDirection: .Down)
-//        }
+        leftBarButtonItem.addAction() { item in
+            self.swipeableView.swipeTopView(inDirection: .Left)
+        }
+        upBarButtonItem.addAction() { item in
+            self.swipeableView.swipeTopView(inDirection: .Up)
+        }
+        rightBarButtonItem.addAction() { item in
+            self.swipeableView.swipeTopView(inDirection: .Right)
+        }
+        downBarButtonItem.addAction() { item in
+            self.swipeableView.swipeTopView(inDirection: .Down)
+        }
         
         var fixedSpace = UIBarButtonItem(barButtonSystemItem: .FixedSpace, action: {item in})
         var flexibleSpace = UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, action: {item in})
