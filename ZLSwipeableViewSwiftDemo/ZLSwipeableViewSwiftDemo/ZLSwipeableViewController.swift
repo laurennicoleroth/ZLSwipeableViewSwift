@@ -119,7 +119,8 @@ class ZLSwipeableViewController: UIViewController {
         swipeableView.nextView = {
             if self.colorIndex < self.colors.count {
                 var cardView = CardView(frame: self.swipeableView.bounds)
-                cardView.backgroundColor = self.colorForName(self.colors[self.colorIndex])
+//                cardView.backgroundColor = self.colorForName(self.colors[self.colorIndex])
+                cardView.backgroundColor = self.colorForName(self.colors.last!)
                 self.colorIndex++
                 
                 if self.loadCardsFromXib {
