@@ -1,16 +1,39 @@
 PODS:
+  - AFNetworking (2.5.4):
+    - AFNetworking/NSURLConnection (= 2.5.4)
+    - AFNetworking/NSURLSession (= 2.5.4)
+    - AFNetworking/Reachability (= 2.5.4)
+    - AFNetworking/Security (= 2.5.4)
+    - AFNetworking/Serialization (= 2.5.4)
+    - AFNetworking/UIKit (= 2.5.4)
+  - AFNetworking/NSURLConnection (2.5.4):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.5.4):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.5.4)
+  - AFNetworking/Security (2.5.4)
+  - AFNetworking/Serialization (2.5.4)
+  - AFNetworking/UIKit (2.5.4):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
   - Cartography (0.5.0)
   - performSelector-swift (0.1.0)
   - ReactiveUI (0.0.2)
   - UIColor+FlatColors (0.0.2)
 
 DEPENDENCIES:
+  - AFNetworking
   - Cartography
   - performSelector-swift
   - ReactiveUI
   - UIColor+FlatColors
 
 SPEC CHECKSUMS:
+  AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
   Cartography: 774e5cc446f5a6bca5d4345c5aa6af9a1fe74dc6
   performSelector-swift: 676d3dab420ed7e1505a7cdaf35e5741509cdd3c
   ReactiveUI: 597b21e143dfc5fe438afc1b7a73c5c7e256175b

@@ -48,12 +48,14 @@ code_sign() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework 'AFNetworking.framework'
   install_framework 'Cartography.framework'
   install_framework 'ReactiveUI.framework'
   install_framework 'UIColor_FlatColors.framework'
   install_framework 'performSelector_swift.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework 'AFNetworking.framework'
   install_framework 'Cartography.framework'
   install_framework 'ReactiveUI.framework'
   install_framework 'UIColor_FlatColors.framework'
